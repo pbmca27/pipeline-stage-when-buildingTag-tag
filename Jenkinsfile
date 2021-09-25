@@ -14,7 +14,6 @@
 //         }
 //     }
 // }
-
 pipeline {
     agent any
 	
