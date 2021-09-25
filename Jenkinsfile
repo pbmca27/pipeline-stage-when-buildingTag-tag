@@ -1,19 +1,3 @@
-pipeline {
-    agent any
-	
-    stages {
-        stage('Build') {
-		
-			when{
-				buildingTag()
-			}
-		
-            steps {                
-                echo 'Hello World building tag'
-            }
-        }
-    }
-}
 // pipeline {
 //     agent any
 	
@@ -21,7 +5,7 @@ pipeline {
 //         stage('Build') {
 		
 // 			when{
-// 				tag "release-*"
+// 				buildingTag()
 // 			}
 		
 //             steps {                
@@ -30,3 +14,19 @@ pipeline {
 //         }
 //     }
 // }
+pipeline {
+    agent any
+	
+    stages {
+        stage('Build') {
+		
+			when{
+				tag "2.0"
+			}
+		
+            steps {                
+                echo 'Hello World building tag'
+            }
+        }
+    }
+}
