@@ -21,7 +21,7 @@ pipeline {
         stage('Build') {
 		
 			when{
-				tag "3.0"
+				tag "release-*"
 			}
 		
             steps {                
