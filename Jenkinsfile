@@ -1,3 +1,20 @@
+// pipeline {
+//     agent any
+	
+//     stages {
+//         stage('Build') {
+		
+// 			when{
+// 				buildingTag()
+// 			}
+		
+//             steps {                
+//                 echo 'Hello World building tag'
+//             }
+//         }
+//     }
+// }
+
 pipeline {
     agent any
 	
@@ -5,7 +22,7 @@ pipeline {
         stage('Build') {
 		
 			when{
-				buildingTag()
+				tag "2.0"
 			}
 		
             steps {                
